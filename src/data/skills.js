@@ -5,10 +5,10 @@ export const skills = {
     { name: 'Java', pct: 30 }
   ],
   frontend: [
-    { name: 'HTML', pct: 100 },
-    { name: 'CSS', pct: 100 },
-    { name: 'Tailwind CSS', pct: 100 },
-    { name: 'React', pct: 70 }
+    { name: 'HTML', pct: 80 },
+    { name: 'CSS', pct: 80 },
+    { name: 'Tailwind CSS', pct: 80 },
+    { name: 'React', pct: 30 }
   ],
   mern: [
     'Node.js','Express.js','MongoDB','Next.js','TypeScript'

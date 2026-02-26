@@ -1,16 +1,18 @@
 export const projects = [
   {
     id: 1,
-    title: 'Current Active Project',
-    description: 'Placeholder text',
+    title: 'SwiftCart E-commerce Template',
+    description: 'A responsive e-commerce website template built with HTML, CSS, and JavaScript. It features a clean design, product listings, shopping cart functionality, and smooth user interactions',
     tech: ['HTML','CSS','JavaScript'],
-    github: '#'
+    github: 'https://github.com/theanisa/SwiftCart',
+    live: 'https://swiftcart-anauratemplates.netlify.app/'
   },
   {
     id: 2,
     title: 'React Assignment Project',
-    description: 'Placeholder text',
+    description: 'A React application developed as part of a coding assignment. It demonstrates proficiency in React fundamentals, component-based architecture, and state management to create an interactive user interface.',
     tech: ['React'],
-    github: '#'
+    github: 'https://github.com/theanisa/React-Assignment',
+    live: '#'
   }
 ]
