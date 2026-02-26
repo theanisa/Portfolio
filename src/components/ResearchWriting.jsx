@@ -7,10 +7,10 @@ export default function ResearchWriting(){
         <div className="research-grid">
           <div className="research-images">
             <div className="research-shelf research-top">
-              <img src="/images/top-shelf.png" alt="Top shelf" />
+              <img src="/images/topshelf.svg" alt="Top shelf" />
             </div>
             <div className="research-shelf research-bottom">
-              <img src="/images/bottom-shelf.png" alt="Bottom shelf" />
+              <img src="/images/bottomshelf.svg" alt="Bottom shelf" />
             </div>
           </div>
           

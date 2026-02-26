@@ -39,7 +39,7 @@ export default function Hero(){
 
           <div className="hero-right">
             <div className="hero-image" aria-hidden>
-              <img src="/images/avatar.png" alt="Anisa" />
+              <img src="/images/avatar.png" alt="Anisa" onError={e=>{e.target.onerror=null; e.target.src='https://via.placeholder.com/420x520?text=Photo'}} />
             </div>
             <div className="image-badge">OPEN FOR WORK</div>
           </div>
