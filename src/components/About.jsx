@@ -7,7 +7,7 @@ export default function About(){
       <div className="about-content">
         <h2>About</h2>
         <p>
-          I'm a focused Computer Science student who approaches development with discipline and curiosity. I enjoy building clean, maintainable web applications and developing a deep foundation in full-stack principles. I prioritize structured learning, long-term growth, and consistently shipping small, valuable projects to strengthen my skills.
+          I am a Computer Science student from Bangladesh focused on building practical, user-centered web applications. I am currently expanding my skills in full-stack development while strengthening my foundation in programming and problem-solving. I approach learning through consistent project-building and continuous improvement, with the long-term goal of developing scalable systems that can create meaningful impact.
         </p>
       </div>
     </section>

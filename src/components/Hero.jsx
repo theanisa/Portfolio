@@ -26,7 +26,6 @@ export default function Hero(){
       <div className={`hero-inner ${mounted ? 'mounted' : ''}`}>
         <div className="hero-grid">
           <div className="hero-left">
-            <div className="kicker">— MERN STACK DEVELOPER</div>
             <h1 className="hero-name">Hi, I'm <span className="accent-name">Anisa</span></h1>
             <p className="role-line">I am a <span className="accent">MERN Stack Enthusiast</span><span className="cursor">|</span></p>
             <p className="lead">Exploring how technology can solve real problems and scale beyond borders.</p>

@@ -24,7 +24,7 @@ export default function Contact(){
       <div className="contact-grid">
         <div className="contact-left">
           <h2 className="contact-title"><span className="contact-highlight">Wanna be in touch?</span></h2>
-          <p className="contact-subtitle">We'd love to hear from you.</p>
+          <p className="contact-subtitle">I'd love to hear from you.</p>
 
           <form className="contact-form" onSubmit={sendEmail}>
             <div className="form-row">
