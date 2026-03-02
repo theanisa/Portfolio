@@ -3,12 +3,21 @@ import React, { useEffect, useState } from 'react'
 export default function Navbar(){
   const [scrolled,setScrolled] = useState(false)
   const [mobileMenuOpen,setMobileMenuOpen] = useState(false)
+  const [darkMode,setDarkMode] = useState(() => {
+    const stored = localStorage.getItem('theme')
+    return stored === 'dark'
+  })
 
   useEffect(()=>{
     const onScroll = () => setScrolled(window.scrollY > 20)
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   },[])
+
+  useEffect(() => {
+    document.body.classList.toggle('dark', darkMode)
+    localStorage.setItem('theme', darkMode ? 'dark' : 'light')
+  }, [darkMode])
 
   return (
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
@@ -19,6 +28,9 @@ export default function Navbar(){
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button className="theme-toggle" onClick={()=>setDarkMode(m=>!m)} aria-label="Toggle theme">
+        {darkMode ? '🌙' : '☀️'}
+      </button>
       <button className="mobile-menu-btn" onClick={()=>setMobileMenuOpen(!mobileMenuOpen)} aria-label="Toggle menu">
         <span></span>
         <span></span>
