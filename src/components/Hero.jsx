@@ -1,49 +1,43 @@
 import React, { useEffect, useState } from 'react'
 
-export default function Hero(){
-  const [mounted,setMounted] = useState(false)
-  const [greeting, setGreeting] = useState('')
-  const fullGreeting = 'Hi — Anisa here!'
-
-  useEffect(()=>{setMounted(true)},[])
-
-  // typing animation for greeting
-  useEffect(() => {
-    let i = 0
-    let id
-    if (mounted) {
-      id = setInterval(() => {
-        i++
-        setGreeting(fullGreeting.slice(0, i))
-        if (i >= fullGreeting.length) clearInterval(id)
-      }, 80)
-    }
-    return () => clearInterval(id)
-  }, [mounted])
-
+export default function Hero() {
   return (
     <section className="hero section" id="hero">
-      <div className={`hero-inner ${mounted ? 'mounted' : ''}`}>
+      <div className="hero-inner">
         <div className="hero-grid">
           <div className="hero-left">
-            <h1 className="hero-name">Hi, I'm <span className="accent-name">Anisa</span></h1>
-            <p className="role-line">I am a <span className="accent">MERN Stack Enthusiast</span><span className="cursor">|</span></p>
-            <p className="lead">Exploring how technology can solve real problems and scale beyond borders.</p>
-
+            <h1 className="hero-heading">
+              <span className="heading-prefix">Hi, I'm</span>
+              <span className="heading-name">Anisa</span>
+            </h1>
+            <h2 className="hero-subheading">
+              I am a <span className="highlight">MERN Stack</span> Enthusiast
+            </h2>
+            <p className="hero-description">
+              Exploring how technology can solve real problems and scale beyond
+              borders.
+            </p>
             <div className="hero-cta">
-              <a className="button primary" href="#contact">Contact Me</a>
-              <a className="button outline" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+              <a href="#contact" className="button primary">
+                Contact Me
+              </a>
+              <a href="/resume.pdf" className="button outline underline">
+                Resume
+              </a>
             </div>
           </div>
-
           <div className="hero-right">
-            <div className="hero-image" aria-hidden>
-              <img src="/images/avatar.png" alt="Anisa" onError={e=>{e.target.onerror=null; e.target.src='https://via.placeholder.com/420x520?text=Photo'}} />
+            <div className="hero-image">
+              <img
+                src="/images/avatar.png"
+                alt="line-art illustration of woman in hijab"
+              />
+              <span className="badge">OPEN FOR WORK</span>
             </div>
-            <div className="image-badge">OPEN FOR WORK</div>
           </div>
         </div>
       </div>
     </section>
   )
 }
+
