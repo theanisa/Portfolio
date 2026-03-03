@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-
 export default function Hero() {
   return (
     <section className="hero section" id="hero">
@@ -9,10 +8,8 @@ export default function Hero() {
             <h1 className="hero-heading">
               <span className="heading-prefix">Hi, I'm</span>
               <span className="heading-name">Anisa</span>
+              <span className="hero-subheading">I am a <span className="highlight">MERN Stack</span> Enthusiast</span>
             </h1>
-            <h2 className="hero-subheading">
-              I am a <span className="highlight">MERN Stack</span> Enthusiast
-            </h2>
             <p className="hero-description">
               Exploring how technology can solve real problems and scale beyond
               borders.
