@@ -12,7 +12,7 @@ export const projects = [
     title: 'React Assignment Project',
     description: 'A React application developed as part of a coding assignment. It demonstrates proficiency in React fundamentals, component-based architecture, and state management to create an interactive user interface.',
     tech: ['React'],
-    github: 'https://github.com/theanisa/React-Assignment',
-    live: '#'
+    github: 'https://github.com/theanisa/assignment-o',
+    live: 'https://assignment-o.vercel.app/'
   }
 ]
