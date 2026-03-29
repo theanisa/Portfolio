@@ -17,10 +17,7 @@ export default function Skills(){
     if (!ref.current) return
     const obs = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true)
-          obs.unobserve(ref.current)
-        }
+        setVisible(entry.isIntersecting)
       },
       { threshold: 0.2 }
     )
@@ -28,43 +25,28 @@ export default function Skills(){
     return () => obs.disconnect()
   }, [])
 
+  const carouselCards = [
+    ...skills.technical.map(category => ({ title: category.title, items: category.items })),
+    { title: 'Growing MERN Stack', items: skills.mern }
+  ]
+  const trackCards = [...carouselCards, ...carouselCards]
+
   return (
     <section className="section" id="skills" ref={ref}>
       <h2>Skills</h2>
-      <div className="skills-grid">
-        <div className="skill-card">
-          <div className="skill-title">Core Languages</div>
-          {skills.core.map(s=> (
-            <div key={s.name} style={{marginBottom:10}}>
-              <div style={{display:'flex',justifyContent:'space-between',fontSize:13}}>
-                <span>{s.name}</span>
-                <span className="muted-list">{s.pct}%</span>
+      <p className="section-subtitle">Technical Skills</p>
+      <div className="skills-carousel">
+        <div className="skills-track">
+          {trackCards.map((card, index) => (
+            <div className="skill-card" key={`${card.title}-${index}`}>
+              <div className="skill-title">{card.title}</div>
+              <div className={`stack-list ${visible ? 'visible' : ''}`}>
+                {card.items.map(item => (
+                  <div key={`${card.title}-${item}`} style={{padding:'6px 0'}}>{item}</div>
+                ))}
               </div>
-              <Progress value={s.pct} animate={visible} />
             </div>
           ))}
-        </div>
-
-        <div className="skill-card">
-          <div className="skill-title">Frontend</div>
-          {skills.frontend.map(s=> (
-            <div key={s.name} style={{marginBottom:10}}>
-              <div style={{display:'flex',justifyContent:'space-between',fontSize:13}}>
-                <span>{s.name}</span>
-                <span className="muted-list">{s.pct}%</span>
-              </div>
-              <Progress value={s.pct} animate={visible} />
-            </div>
-          ))}
-        </div>
-
-        <div className="skill-card">
-          <div className="skill-title">Growing MERN Stack</div>
-          <div className={`stack-list ${visible ? 'visible' : ''}`}>
-            {skills.mern.map(s=> (
-              <div key={s} style={{padding:'6px 0'}}>{s}</div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

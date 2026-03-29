@@ -12,5 +12,27 @@ export const skills = {
   ],
   mern: [
     'Node.js','Express.js','MongoDB','Next.js','TypeScript'
+  ],
+  technical: [
+    {
+      title: 'Programming Languages',
+      items: ['JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3', 'Python (Basic)']
+    },
+    {
+      title: 'Frontend Core',
+      items: ['React.js', 'Next.js 15 (App Router)', 'TypeScript', 'JavaScript (ES6+)']
+    },
+    {
+      title: 'Styling & UI',
+      items: ['Tailwind CSS', 'Framer Motion', 'CSS3', 'Responsive "Bento" Layouts']
+    },
+    {
+      title: 'Data & Integration',
+      items: ['RESTful APIs', 'JSON Parsing', 'State Management (Context/Zustand)']
+    },
+    {
+      title: 'Tools & DevOps',
+      items: ['Git/GitHub', 'Vercel', 'Netlify', 'Postman', 'AI-Augmented Workflows']
+    }
   ]
 }

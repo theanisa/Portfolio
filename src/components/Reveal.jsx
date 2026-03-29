@@ -10,10 +10,7 @@ export default function Reveal({ children }) {
     const obs = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            setVisible(true)
-            obs.unobserve(el)
-          }
+          setVisible(entry.isIntersecting)
         })
       },
       { threshold: 0.12 }
