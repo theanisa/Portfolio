@@ -245,6 +245,30 @@ img, video, iframe{max-width:100%;height:auto;display:block;}
   .hero-subheading{font-size:1.5rem}
   .hero-description{font-size:0.9rem}
 }
+
+/* Mobile Hero: under 768px - image bottom, centered, with gap */
+@media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 30px;
+  }
+  .hero-left {
+    text-align: center;
+    width: 100%;
+  }
+  .hero-subheading {
+    text-align: center;
+  }
+  .hero-image {
+    width: 90%;
+    max-width: 400px;
+  }
+  .hero-grid {
+    width: 100%;
+    gap: 0;
+  }
+}
 @media(max-width:640px){
   .hero-heading{font-size:1.6rem}
   .heading-name{font-size:2.4rem}
