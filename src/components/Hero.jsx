@@ -27,7 +27,7 @@ export default function Hero() {
                 Contact Me
               </a>
               <a href="https://docs.google.com/document/d/1Ezx1-1ceIQs9paGkKQqC_34lUkjTSmgst1PkYG4BJzw/edit?usp=sharing" className="button outline underline" target="_blank" rel="noopener noreferrer">
-                Resume
+                CV
               </a>
             </div>
           </div>

@@ -1,11 +1,26 @@
-# Hero Mobile CSS Implementation ✓
+# MongoDB Fullstack Setup TODO
 
-## Plan Steps
+## 1. Restructure Files
+- [ ] Move all React/Vite/frontend files to frontend/
+- [ ] Delete root clutter (create_images.ps1, images/, public/, scripts/, docs/)
+- [ ] Keep root package.json updated
 
-- [x] Step 1: Add @media (max-width: 768px) query to src/styles.css targeting .hero-inner (flex-direction: column-reverse, align-items: center, gap: 30px)
-- [x] Step 2: Style .hero-left for full width and center text
-- [x] Step 3: Set .hero-image width: 90%, max-width: 400px
-- [x] Step 4: Adjust .hero-grid width: 100%, gap: 0
-- [x] Step 5: Test layout on <768px screens
+## 2. Backend Setup
+- [ ] Create backend/package.json (express, mongoose, etc.)
+- [ ] Create backend/server.js (MongoDB connect, /health)
+- [ ] Create backend/.env (user fills MONGO_URI)
 
-**Status:** Complete. Hero section now uses flex column-reverse (image below text), align-items: center, text-align: center, image 90% width, 30px gap on screens under 768px.
+## 3. Root Config
+- [ ] Update root package.json (workspaces, scripts)
+- [ ] Add proxy in frontend/vite.config.js
+
+## 4. Install & Run
+- [ ] cd frontend && npm install
+- [ ] cd backend && npm install
+- [ ] npm run dev (starts both)
+
+## 5. Test
+- [ ] Backend: http://localhost:3001/health
+- [ ] Frontend: http://localhost:5173
+- [ ] MongoDB connected ✓
+
